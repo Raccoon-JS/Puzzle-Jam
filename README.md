@@ -9,6 +9,8 @@ Make a puzzle game under two different themes.
 
 ## 8 Bits to Infinity
 
+From June 6th 11 AM to 13th 11 AM
+
 ### Theme
 
 <p align="center">
@@ -19,6 +21,10 @@ Black and White
 
 ## Weekly Game Jam 100
 
+From June 7th 12 PM to 13th 12 PM
+
 ### Theme
 
-TBA 
+<p align = "center">
+100 
+</p>
