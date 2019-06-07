@@ -17,6 +17,7 @@ _global_script_class_icons={
 
 config/name="PuzzleJam"
 run/main_scene="res://scenes/menu.tscn"
+boot_splash/image="res://images/new_Godot_boot_splash_bw_1.png"
 boot_splash/bg_color=Color( 1, 1, 1, 1 )
 config/icon="res://icon.png"
 
@@ -24,7 +25,7 @@ config/icon="res://icon.png"
 
 window/size/width=960
 window/size/height=960
-window/stretch/mode="2d"
+window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 
 [input]
