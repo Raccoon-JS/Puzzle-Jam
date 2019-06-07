@@ -1,40 +1,52 @@
 extends KinematicBody2D
 
-export (int) var speed = 100
+const SPEED = 70
 
-var velocity = Vector2()
-
-func _ready():
-	pass # Replace with function body.
-
-func get_input():
-	velocity = Vector2()
-	if Input.is_action_pressed("move_right"):
-		velocity.x += 1
-		$animation.play("move_right")
-	else:
-		$animation.play("idle_right")
-	if Input.is_action_pressed("move_left"):
-		velocity.x -= 1
-		$animation.play("move_left")
-	else:
-		$animation.play("idle_left")
-	if Input.is_action_pressed("move_down"):
-		velocity.y += 1
-		$animation.play("move_down")
-	else:
-		$animation.play("idle_down")
-	if Input.is_action_pressed("move_up"):
-		velocity.y -= 1
-		$animation.play("move_up")
-	else:
-		$animation.play("move_up")
-	
-	velocity = velocity.normalized() * speed
-	pass
+var movedir = Vector2(0,0)
+var spritedir = "down"
 
 func _physics_process(delta):
 	if delta:
-		get_input()
-		velocity = move_and_slide(velocity)
+		controls_loop()
+		movement_loop()
+		spritedir_loop()
+		
+		if movedir != Vector2(0,0):
+			anim_switch("move")
+		else:
+			anim_switch("idle")
+	pass
+
+func controls_loop():
+	var LEFT = Input.is_action_pressed("move_left")
+	var RIGHT = Input.is_action_pressed("move_right")
+	var UP = Input.is_action_pressed("move_up")
+	var DOWN = Input.is_action_pressed("move_down")
+	
+	movedir.x = -int(LEFT) + int(RIGHT)
+	movedir.y = -int(UP) + int(DOWN)
+	
+	pass
+
+func movement_loop():
+	var motion = movedir.normalized() * SPEED
+	motion = move_and_slide(motion, Vector2(0,0))
+	pass
+
+func spritedir_loop():
+	match movedir:
+		Vector2(-1,0):
+			spritedir = "left"
+		Vector2(1,0):
+			spritedir = "right"
+		Vector2(0,-1):
+			spritedir = "up"
+		Vector2(0,1):
+			spritedir = "down"
+	pass
+
+func anim_switch(animation):
+	var newanim = str(animation + "_" + spritedir)
+	if $animation.current_animation != newanim:
+		$animation.play(newanim)
 	pass
