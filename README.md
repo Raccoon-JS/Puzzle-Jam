@@ -11,9 +11,11 @@ Make a puzzle game under two different themes.
 
 ### Theme
 
+<p align="center">
 Black and White
 
-![Black and White](https://github.com/Raccoon-JS/Puzzle-Jam/blob/master/black-and-white.png)
+<img src="BlackAndWhite.png">
+</p>
 
 ## Weekly Game Jam 100
 
