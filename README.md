@@ -6,3 +6,15 @@ An entry for 8 Bits to Infinity's Puzzle Jam (and Weekly Game Jam 100).
 </p>
 
 Make a puzzle game under two different themes.
+
+## 8 Bits to Infinity
+
+### Theme
+
+Black and White
+
+## Weekly Game Jam 100
+
+### Theme
+
+TBA 
