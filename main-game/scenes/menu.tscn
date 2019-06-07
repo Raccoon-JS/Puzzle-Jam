@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="menu" type="Node"]
+
+[node name="background" type="Control" parent="."]
+margin_right = 800.0
+margin_bottom = 800.0
+
+[node name="background-color" type="ColorRect" parent="background"]
+margin_right = 960.0
+margin_bottom = 960.0
