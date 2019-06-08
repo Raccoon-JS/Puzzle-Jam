@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/player.gd" type="Script" id=1]
 [ext_resource path="res://images/white-Cap-Character-16x18.png" type="Texture" id=2]
-[ext_resource path="res://scenes/television_screen.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/camera_layer.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.72477, 4.86225 )
@@ -173,10 +173,4 @@ drag_margin_top = 0.4
 drag_margin_right = 0.4
 drag_margin_bottom = 0.4
 
-[node name="GUI" type="CanvasLayer" parent="camera"]
-
-[node name="television_screen" parent="camera/GUI" instance=ExtResource( 3 )]
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 960.0
-margin_bottom = 960.0
+[node name="camera_layer" parent="camera" instance=ExtResource( 3 )]
