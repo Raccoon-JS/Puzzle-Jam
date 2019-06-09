@@ -1,3 +1,15 @@
 [gd_scene format=2]
 
 [node name="about" type="Node"]
+
+[node name="return" type="Button" parent="."]
+margin_left = 16.0
+margin_top = 832.0
+margin_right = 352.0
+margin_bottom = 928.0
+
+[node name="licenses" type="Button" parent="."]
+margin_left = 640.0
+margin_top = 832.0
+margin_right = 912.0
+margin_bottom = 928.0

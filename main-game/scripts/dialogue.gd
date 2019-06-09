@@ -18,7 +18,7 @@ func _ready():
 		g.write("Ext. Mysterious Building - 100 minutes later",null,"res://images/panels/intro/panel_3.png")
 		g.write("Nobody knew where Josh disappeared.",null,"res://images/panels/intro/panel_3.png")
 		g.write("Then inside the room 100.",null,null)
-		g.write("Josh","Ugh, where am I?","res://images/panels/intro/panel_1.png")
+		g.write("Josh","Ugh, where am I?","res://images/panels/intro/panel_6.png")
 		g.write("He looks at the brick wall. There is no window to the outside",null,"res://images/panels/intro/panel_4.png")
 		g.write("Josh","What? I am locked up in this room?","res://images/panels/intro/panel_4.png")
 		g.write("Then he hears a sound from the intercom on the ceiling.",null,null)

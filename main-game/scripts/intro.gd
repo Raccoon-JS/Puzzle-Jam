@@ -9,6 +9,7 @@ var event_queue = []
 var prev_pic = null
 var next_pic = null
 var clicks = 0 
+var full_clicks = 0
 
 func _ready():
 	story.request_ready()
@@ -30,12 +31,12 @@ func write(char_name, text_str = null, picture = null):
 	else:
 		prev_pic = next_pic
 		next_pic = picture
-	
+	full_clicks += 1
 	event_queue.push_front({"name":char_name, "dialogue": text_str, "picture": next_pic})
 	pass
 
 func write_component():
-	if clicks > 19:
+	if clicks > full_clicks - 1:
 		global.goto_scene("res://scenes/rooms/1_room.tscn")
 	else:
 		text_name.clear()

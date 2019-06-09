@@ -1,26 +1,39 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scripts/camera_layer.gd" type="Script" id=1]
-[ext_resource path="res://fonts/orange kid.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://images/Josh_face_bw.png" type="Texture" id=3]
+[ext_resource path="res://images/Josh_face_bw.png" type="Texture" id=2]
+[ext_resource path="res://fonts/orange kid.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://scripts/camera_dialogues.gd" type="Script" id=4]
-[ext_resource path="res://scenes/television_screen.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scripts/shader/screen_shaders.shader" type="Shader" id=6]
+[ext_resource path="res://scripts/pause_screen.gd" type="Script" id=5]
+[ext_resource path="res://scenes/television_screen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scripts/shader/screen_shaders.shader" type="Shader" id=7]
 
 [sub_resource type="DynamicFont" id=2]
-size = 30
-font_data = ExtResource( 2 )
+size = 42
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 42
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=4]
 size = 32
-font_data = ExtResource( 2 )
+font_data = ExtResource( 3 )
 
-[sub_resource type="ShaderMaterial" id=1]
-shader = ExtResource( 6 )
+[sub_resource type="DynamicFont" id=6]
+size = 42
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 42
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 42
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 3 )
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 7 )
 
 [sub_resource type="Animation" id=5]
 resource_name = "fade"
@@ -42,26 +55,19 @@ tracks/0/keys = {
 pause_mode = 2
 script = ExtResource( 1 )
 
-[node name="time" type="Label" parent="."]
-margin_left = 320.0
-margin_right = 640.0
-margin_bottom = 64.0
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-align = 1
-valign = 1
-
 [node name="Josh" type="TextureRect" parent="."]
+visible = false
 margin_left = 32.0
 margin_top = 448.0
 margin_right = 352.0
 margin_bottom = 768.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 expand = true
 
 [node name="other_character" type="TextureRect" parent="."]
+visible = false
 margin_left = 608.0
 margin_top = 448.0
 margin_right = 928.0
@@ -80,7 +86,7 @@ margin_bottom = 928.0
 margin_left = 32.0
 margin_right = 320.0
 margin_bottom = 40.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 scroll_active = false
 
@@ -89,7 +95,7 @@ margin_left = 16.0
 margin_top = 48.0
 margin_right = 880.0
 margin_bottom = 128.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 scroll_active = false
 
@@ -104,12 +110,78 @@ margin_right = 960.0
 margin_bottom = 960.0
 color = Color( 0, 0, 0, 1 )
 
-[node name="television_screen" parent="." instance=ExtResource( 5 )]
+[node name="pause_screen" type="ColorRect" parent="."]
+pause_mode = 2
 visible = false
-material = SubResource( 1 )
+margin_left = 80.0
+margin_top = 80.0
+margin_right = 880.0
+margin_bottom = 880.0
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 5 )
+
+[node name="title" type="Label" parent="pause_screen"]
+margin_right = 800.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "This is a Pause Screen. But the time is running out."
+align = 1
+valign = 1
+
+[node name="options" type="VBoxContainer" parent="pause_screen"]
+margin_right = 800.0
+margin_bottom = 800.0
+alignment = 1
+
+[node name="1_menu" type="Label" parent="pause_screen/options"]
+margin_top = 346.0
+margin_right = 800.0
+margin_bottom = 398.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "1. return to menu"
+align = 1
+valign = 1
+
+[node name="2_quit" type="Label" parent="pause_screen/options"]
+margin_top = 402.0
+margin_right = 800.0
+margin_bottom = 454.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "2. quit the game"
+align = 1
+valign = 1
+
+[node name="question" type="Node" parent="."]
+
+[node name="time_bar" type="ColorRect" parent="."]
+pause_mode = 2
+margin_left = 320.0
+margin_top = 848.0
+margin_right = 640.0
+margin_bottom = 960.0
+
+[node name="time" type="Label" parent="time_bar"]
+pause_mode = 2
+margin_right = 320.0
+margin_bottom = 112.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+
+[node name="television_screen" parent="." instance=ExtResource( 6 )]
+material = SubResource( 4 )
 margin_right = 960.0
 margin_bottom = 960.0
 
+[node name="Timer" type="Timer" parent="."]
+pause_mode = 2
+wait_time = 100.0
+
 [node name="player" type="AnimationPlayer" parent="."]
 anims/fade = SubResource( 5 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="animation_finished" from="player" to="." method="_on_player_animation_finished"]
