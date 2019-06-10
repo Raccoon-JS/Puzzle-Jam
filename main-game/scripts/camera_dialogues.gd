@@ -15,6 +15,8 @@ func _ready():
 		c.write("Intercom","WASD is a movement. E is interact. ESC is pause (go ahead and pause the time).","res://images/cirgarette_man_sillouette.png")
 		c.write("Josh","What is this, a game?",null)
 		c.write("Josh","I guess I have to move with WASD keys and press E to sEE the question on the wall.",null)
+	else:
+		c.write("Josh","Nothing",null)
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
