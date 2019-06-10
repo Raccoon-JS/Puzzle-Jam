@@ -7,7 +7,7 @@
 size = 40
 font_data = ExtResource( 2 )
 
-[node name="question_1" type="Node"]
+[node name="question_2" type="Node"]
 
 [node name="brick_wall" type="TextureRect" parent="."]
 margin_left = -240.0
