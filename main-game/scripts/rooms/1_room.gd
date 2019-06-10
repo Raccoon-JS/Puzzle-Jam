@@ -41,7 +41,10 @@ func _process(delta):
 		if Input.is_action_just_pressed("interact"):
 			clock.pause_mode = true
 			time_left -= 20
-			clock.wait_time = time_left
+			if time_left > 0:
+				clock.wait_time = time_left
+			else:
+				global.goto_scene("res://scenes/menu.tscn")
 			clock.start()
 	
 	if right_answer:

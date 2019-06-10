@@ -16,9 +16,9 @@ func reverse_change():
 
 # Pressed
 func _on_start_button_pressed():
-	$start.visible = false
-	$about.visible = false
-	$quit.visible = false
+	$button_100/start.visible = false
+	$button_100/about.visible = false
+	$button_100/quit.visible = false
 	$player.play("sucked_into_tv")
 	pass # Replace with function body.
 
@@ -33,28 +33,34 @@ func _on_quit_button_pressed():
 # Start Button Color Change
 func _on_start_button_mouse_entered():
 	change_black()
+	$button_100/start.text = "100"
 	pass # Replace with function body.
 
 func _on_start_button_mouse_exited():
 	reverse_change()
+	$button_100/start.text = "START"
 	pass # Replace with function body.
 
 # About Button Color Change
 func _on_about_button_mouse_entered():
 	change_black()
+	$button_100/about.text = "100"
 	pass # Replace with function body.
 
 func _on_about_button_mouse_exited():
 	reverse_change()
+	$button_100/about.text = "ABOUT"
 	pass # Replace with function body.
 
 # Quit Button Color Change
 func _on_quit_button_mouse_entered():
 	change_black()
+	$button_100/quit.text = "100"
 	pass # Replace with function body.
 
 func _on_quit_button_mouse_exited():
 	reverse_change()
+	$button_100/quit.text = "QUIT"
 	pass # Replace with function body.
 
 func _on_player_animation_finished(anim_name):

@@ -4,7 +4,7 @@ onready var g = get_parent().get_parent()
 
 func _ready():
 	if g.get_parent().name == "root" and g.name == "intro":
-		g.write("Once upon a time there is man named Josh.",null,"res://images/panels/intro/panel_1.png")
+		g.write("It's 1:00 PM.",null,"res://images/panels/intro/panel_1.png")
 		g.write("Josh is a musician who went outside for a walk to find an idea for his latest piece.",null,"res://images/panels/intro/panel_1.png")
 		g.write("Josh","The weather is nice out there.",null)
 		g.write("Then Josh meets this sketchy looking bald man.",null,null)
