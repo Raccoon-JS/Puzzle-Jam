@@ -1,5 +1,7 @@
 extends Node2D
 
+# 1_room.gd
+
 onready var time_text = $player/camera/camera_layer/time_bar/time
 onready var clock = $player/camera/camera_layer/Timer
 onready var q_access = $player/camera/camera_layer/question
@@ -15,6 +17,7 @@ var right_answer = false
 var time_left
 
 func _ready():
+	clock.set("wait_time",100)
 	$other_sprites/answer_1/Sprite/label.text = str(20)
 	$other_sprites/answer_2/Sprite/label.text = str(12)
 	get_tree().paused = true

@@ -32,10 +32,10 @@ custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "=100=100=100=100=100=100=
 question:
-Alice Liddle did a math that 4 times 5 is.....
+
 =100=100=100=100=100=100=
 hint:
-Only Alice knows the answer. Look up 18 base notation.
+
 =100=100=100=100=100=100=
 Press E to return.
 =100=100=100=100=100=100="

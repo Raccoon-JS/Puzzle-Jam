@@ -8,35 +8,34 @@
 [ext_resource path="res://scenes/television_screen.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts/shader/screen_shaders.shader" type="Shader" id=7]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 42
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 32
 font_data = ExtResource( 3 )
 
+[sub_resource type="DynamicFont" id=3]
+size = 42
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 42
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 42
+font_data = ExtResource( 3 )
+
 [sub_resource type="DynamicFont" id=6]
-size = 42
-font_data = ExtResource( 3 )
-
-[sub_resource type="DynamicFont" id=7]
-size = 42
-font_data = ExtResource( 3 )
-
-[sub_resource type="DynamicFont" id=8]
-size = 42
-font_data = ExtResource( 3 )
-
-[sub_resource type="DynamicFont" id=1]
 size = 60
 font_data = ExtResource( 3 )
 
-[sub_resource type="ShaderMaterial" id=4]
+[sub_resource type="ShaderMaterial" id=7]
 shader = ExtResource( 7 )
 
-[sub_resource type="Animation" id=5]
-resource_name = "fade"
+[sub_resource type="Animation" id=8]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("screen:modulate")
@@ -86,7 +85,7 @@ margin_bottom = 928.0
 margin_left = 32.0
 margin_right = 320.0
 margin_bottom = 40.0
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 scroll_active = false
 
@@ -95,7 +94,7 @@ margin_left = 16.0
 margin_top = 48.0
 margin_right = 880.0
 margin_bottom = 128.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 scroll_active = false
 
@@ -123,7 +122,7 @@ script = ExtResource( 5 )
 [node name="title" type="Label" parent="pause_screen"]
 margin_right = 800.0
 margin_bottom = 80.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "This is a Pause Screen. But the time is running out."
 align = 1
@@ -138,7 +137,7 @@ alignment = 1
 margin_top = 346.0
 margin_right = 800.0
 margin_bottom = 398.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "1. return to menu"
 align = 1
@@ -148,7 +147,7 @@ valign = 1
 margin_top = 402.0
 margin_right = 800.0
 margin_bottom = 454.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "2. quit the game"
 align = 1
@@ -167,13 +166,13 @@ margin_bottom = 960.0
 pause_mode = 2
 margin_right = 320.0
 margin_bottom = 112.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 align = 1
 valign = 1
 
 [node name="television_screen" parent="." instance=ExtResource( 6 )]
-material = SubResource( 4 )
+material = SubResource( 7 )
 margin_right = 960.0
 margin_bottom = 960.0
 
@@ -182,6 +181,6 @@ pause_mode = 2
 wait_time = 100.0
 
 [node name="player" type="AnimationPlayer" parent="."]
-anims/fade = SubResource( 5 )
+anims/fade = SubResource( 8 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="animation_finished" from="player" to="." method="_on_player_animation_finished"]
