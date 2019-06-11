@@ -16,4 +16,4 @@ script = ExtResource( 1 )
 position = Vector2( 496, 115 )
 
 [node name="puzzle_description" parent="other_sprites" instance=ExtResource( 4 )]
-position = Vector2( 464, 112 )
+position = Vector2( 448, 688 )

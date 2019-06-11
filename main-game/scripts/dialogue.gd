@@ -4,9 +4,10 @@ onready var g = get_parent().get_parent()
 
 func _ready():
 	if g.get_parent().name == "root" and g.name == "intro":
-		g.write("It's 1:00 PM.",null,"res://images/panels/intro/panel_1.png")
-		g.write("Josh is a musician who went outside for a walk to find an idea for his latest piece.",null,"res://images/panels/intro/panel_1.png")
-		g.write("Josh","The weather is nice out there.",null)
+		g.write("It's 1:00 PM.",null,"res://images/panels/intro/panel_7.png")
+		g.write("100 hours 'til the end of Game Jam.", null,"res://images/panels/intro/panel_7.png")
+		g.write("Josh couldn't think of an idea for the game's music, so he goes outside for a walk.",null,"res://images/panels/intro/panel_1.png")
+		g.write("Josh","The weather is nice out there.","res://images/panels/intro/panel_1.png")
 		g.write("Then Josh meets this sketchy looking bald man.",null,null)
 		g.write("The Bald Man","Hello.","res://images/panels/intro/panel_2.png")
 		g.write("Josh","Yes, can I help you?","res://images/panels/intro/panel_2.png")

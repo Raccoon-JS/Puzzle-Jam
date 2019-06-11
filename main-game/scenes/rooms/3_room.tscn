@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/rooms/3_room.gd" type="Script" id=1]
 [ext_resource path="res://scenes/tiles/default_tiles.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/door_animation.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/puzzle_description.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=5]
 
 [node name="3_room" type="Node2D"]
 script = ExtResource( 1 )
@@ -16,4 +17,7 @@ script = ExtResource( 1 )
 position = Vector2( 496, 115 )
 
 [node name="puzzle_description" parent="other_sprites" instance=ExtResource( 4 )]
-position = Vector2( 464, 112 )
+position = Vector2( 464, 688 )
+
+[node name="player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 464, 304 )

@@ -19,9 +19,20 @@ func _ready():
 			c.write("Josh","I guess I have to move with WASD keys and press E to sEE the question on the wall.",null)
 		"2_room":
 			c.write("Josh","This one is a lot more bigger.",null)
+			c.write("Intercom","You still need to solve to survive.","res://images/cirgarette_man_sillouette.png")
+			c.write("Intercom","But don't worry, I maxed out the 100 seconds time limit.","res://images/cirgarette_man_sillouette.png")
 		"3_room":
-			c.write("Josh","This room looks almost exactly the same! And it even shares a same size!",null)
-			c.write("Intercom","I don't know - probably magic?","es://images/cirgarette_man_sillouette.png")
+			c.write("Josh","This room looks almost exactly the same. And it even shares the exact same size!",null)
+			c.write("Intercom","Eh, I was lazy. But this one is a lot harder!","es://images/cirgarette_man_sillouette.png")
+		"4_room":
+			c.write("Intercom","Do you see the goat over there?","res://images/cirgarette_man_sillouette.png")
+			c.write("Josh","A goat?",null)
+			c.write("Goat","Hey there!","res://images/goat.png")
+			c.write("Josh","And it talks!",null)
+			c.write("Goat","Wanna play Battletoads?","res://images/goat.png")
+		"5_room":
+			c.write("Intercom","This is the last layer.","res://images/cirgarette_man_sillouette.png")
+			c.write("Josh","the last layer?","")
 		_:
 			c.write("Josh","Nothing.",null)
 	pass # Replace with function body.
