@@ -179,6 +179,7 @@ margin_bottom = 960.0
 [node name="Timer" type="Timer" parent="."]
 pause_mode = 2
 wait_time = 100.0
+autostart = true
 
 [node name="player" type="AnimationPlayer" parent="."]
 anims/fade = SubResource( 8 )

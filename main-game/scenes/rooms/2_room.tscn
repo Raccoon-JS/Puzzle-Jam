@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/rooms/2_room.gd" type="Script" id=1]
 [ext_resource path="res://scenes/tiles/default_tiles.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/door_animation.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/puzzle_description.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/answer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=6]
 
 [node name="2_room" type="Node2D"]
 script = ExtResource( 1 )
@@ -20,7 +21,7 @@ position = Vector2( 496, 115 )
 position = Vector2( 448, 688 )
 
 [node name="answer_1" parent="other_sprites" instance=ExtResource( 5 )]
-position = Vector2( 176, 496 )
+position = Vector2( 192, 240 )
 
 [node name="answer_2" parent="other_sprites" instance=ExtResource( 5 )]
 position = Vector2( 240, 240 )
@@ -35,13 +36,35 @@ position = Vector2( 336, 240 )
 position = Vector2( 384, 240 )
 
 [node name="answer_6" parent="other_sprites" instance=ExtResource( 5 )]
-position = Vector2( 448.44, 848 )
+position = Vector2( 688, 720 )
 
 [node name="answer_7" parent="other_sprites" instance=ExtResource( 5 )]
-position = Vector2( 496, 848 )
+position = Vector2( 736, 720 )
 
 [node name="answer_8" parent="other_sprites" instance=ExtResource( 5 )]
-position = Vector2( 544, 848 )
+position = Vector2( 784, 720 )
 
 [node name="answer_9" parent="other_sprites" instance=ExtResource( 5 )]
-position = Vector2( 592, 848 )
+position = Vector2( 832, 720 )
+
+[node name="player" parent="." instance=ExtResource( 6 )]
+position = Vector2( 464, 304 )
+[connection signal="body_entered" from="other_sprites/puzzle_description" to="." method="_on_puzzle_description_body_entered"]
+[connection signal="body_entered" from="other_sprites/answer_1" to="." method="_on_answer_1_body_entered"]
+[connection signal="body_exited" from="other_sprites/answer_1" to="." method="_on_answer_1_body_exited"]
+[connection signal="body_entered" from="other_sprites/answer_2" to="." method="_on_answer_2_body_entered"]
+[connection signal="body_exited" from="other_sprites/answer_2" to="." method="_on_answer_2_body_exited"]
+[connection signal="body_entered" from="other_sprites/answer_3" to="." method="_on_answer_3_body_entered"]
+[connection signal="body_exited" from="other_sprites/answer_3" to="." method="_on_answer_3_body_exited"]
+[connection signal="body_entered" from="other_sprites/answer_4" to="." method="_on_answer_4_body_entered"]
+[connection signal="body_exited" from="other_sprites/answer_4" to="." method="_on_answer_4_body_exited"]
+[connection signal="body_entered" from="other_sprites/answer_5" to="." method="_on_answer_5_body_entered"]
+[connection signal="body_exited" from="other_sprites/answer_5" to="." method="_on_answer_5_body_exited"]
+[connection signal="body_entered" from="other_sprites/answer_6" to="." method="_on_answer_6_body_entered"]
+[connection signal="body_exited" from="other_sprites/answer_6" to="." method="_on_answer_6_body_exited"]
+[connection signal="body_entered" from="other_sprites/answer_7" to="." method="_on_answer_7_body_entered"]
+[connection signal="body_exited" from="other_sprites/answer_7" to="." method="_on_answer_7_body_exited"]
+[connection signal="body_entered" from="other_sprites/answer_8" to="." method="_on_answer_8_body_entered"]
+[connection signal="body_exited" from="other_sprites/answer_8" to="." method="_on_answer_8_body_exited"]
+[connection signal="body_entered" from="other_sprites/answer_9" to="." method="_on_answer_9_body_entered"]
+[connection signal="body_exited" from="other_sprites/answer_9" to="." method="_on_answer_9_body_exited"]

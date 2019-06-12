@@ -72,7 +72,7 @@ func _on_puzzle_description_body_exited(body):
 func _on_front_door_body_entered(body):
 	if body.name == "player":
 		if open_door:
-				global.goto_scene("res://scenes/menu.tscn")
+				global.goto_scene("res://scenes/rooms/2_room.tscn")
 	pass # Replace with function body.
 
 func _on_answer_1_body_entered(body):

@@ -31,11 +31,9 @@ margin_bottom = 624.0
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "=100=100=100=100=100=100=
-question:
-
+Set the right letter and number on the square.
 =100=100=100=100=100=100=
-hint:
-
+What number do you see frequently? And what's the binary for that Roman numeral letter.
 =100=100=100=100=100=100=
 Press E to return.
 =100=100=100=100=100=100="
