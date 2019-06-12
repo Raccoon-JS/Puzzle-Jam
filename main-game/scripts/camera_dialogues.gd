@@ -10,7 +10,7 @@ func _ready():
 		"1_room":
 			c.write("Josh","Who is this?",null)
 			c.write("Intercom","No need to ask that question.","res://images/cirgarette_man_sillouette.png")
-			c.write("Intercom","You are in the core center of Room 100 and 100th floor of this building.","res://images/cirgarette_man_sillouette.png")
+			c.write("Intercom","The time is 1 AM. You are in the core center of Room 100 and 100th floor of this building.","res://images/cirgarette_man_sillouette.png")
 			c.write("Intercom","And you have 100 seconds to get out of here.","res://images/cirgarette_man_sillouette.png")
 			c.write("Josh","What?",null)
 			c.write("Intercom","Yes. But if you want to make it alive, take the hint very seriously.","res://images/cirgarette_man_sillouette.png")
@@ -32,7 +32,7 @@ func _ready():
 			c.write("Goat","Wanna play Battletoads?","res://images/goat.png")
 		"5_room":
 			c.write("Intercom","This is the last layer.","res://images/cirgarette_man_sillouette.png")
-			c.write("Josh","the last layer?","")
+			c.write("Josh","the last layer?",null)
 		_:
 			c.write("Josh","Nothing.",null)
 	pass # Replace with function body.

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/rooms/2_room.gd" type="Script" id=1]
 [ext_resource path="res://scenes/tiles/default_tiles.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/door_animation.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/puzzle_description.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/answer.tscn" type="PackedScene" id=5]
 
 [node name="2_room" type="Node2D"]
 script = ExtResource( 1 )
@@ -17,3 +18,30 @@ position = Vector2( 496, 115 )
 
 [node name="puzzle_description" parent="other_sprites" instance=ExtResource( 4 )]
 position = Vector2( 448, 688 )
+
+[node name="answer_1" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 176, 496 )
+
+[node name="answer_2" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 240, 240 )
+
+[node name="answer_3" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 288, 240 )
+
+[node name="answer_4" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 336, 240 )
+
+[node name="answer_5" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 384, 240 )
+
+[node name="answer_6" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 448.44, 848 )
+
+[node name="answer_7" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 496, 848 )
+
+[node name="answer_8" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 544, 848 )
+
+[node name="answer_9" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 592, 848 )
