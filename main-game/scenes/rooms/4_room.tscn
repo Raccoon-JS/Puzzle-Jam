@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/tiles/default_tiles.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/door_animation.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/puzzle_description.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/answer.tscn" type="PackedScene" id=5]
 
 [node name="4_room" type="Node2D"]
 script = ExtResource( 1 )
@@ -19,5 +19,50 @@ position = Vector2( 496, 115 )
 [node name="puzzle_description" parent="other_sprites" instance=ExtResource( 4 )]
 position = Vector2( 464.88, 688 )
 
-[node name="player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 464, 304 )
+[node name="answer_1" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 112, 208 )
+
+[node name="answer_2" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 208, 208 )
+
+[node name="answer_3" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 112, 288 )
+
+[node name="answer_4" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 208, 288 )
+
+[node name="answer_5" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 736, 200 )
+
+[node name="answer_6" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 832, 200 )
+
+[node name="answer_7" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 736, 288 )
+
+[node name="answer_8" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 832, 288 )
+
+[node name="answer_9" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 112, 768 )
+
+[node name="answer_10" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 208, 768 )
+
+[node name="answer_11" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 112, 848 )
+
+[node name="answer_12" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 208, 848 )
+
+[node name="answer_13" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 736, 768 )
+
+[node name="answer_14" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 832, 768 )
+
+[node name="answer_15" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 736, 848 )
+
+[node name="answer_16" parent="other_sprites" instance=ExtResource( 5 )]
+position = Vector2( 832, 848 )
