@@ -23,16 +23,24 @@ func _ready():
 			c.write("Intercom","But don't worry, I maxed out the 100 seconds time limit.","res://images/cirgarette_man_sillouette.png")
 		"3_room":
 			c.write("Josh","This room looks almost exactly the same. And it even shares the exact same size!",null)
-			c.write("Intercom","Eh, I was lazy. But this one is a lot harder!","es://images/cirgarette_man_sillouette.png")
-		"4_room":
-			c.write("Intercom","Do you see the goat over there?","res://images/cirgarette_man_sillouette.png")
-			c.write("Josh","A goat?",null)
-			c.write("Goat","Hey there!","res://images/goat.png")
+			c.write("Intercom","Eh, I was lazy.","res://images/cirgarette_man_sillouette.png")
+			c.write("Josh","And why there is a goat over there?",null)
+			c.write("Goat","Hey there! Wanna play tic-tac-toe?","res://images/goat.png")
 			c.write("Josh","And it talks!",null)
-			c.write("Goat","Wanna play Battletoads?","res://images/goat.png")
+			c.write("Goat","Or do you want to play Battletoads?","res://images/goat.png")
+			c.write("Josh","I don't like where is going!",null)
+			c.write("Intercom","Just play tic-tac-toe with him..","res://images/cirgarette_man_sillouette.png")
+			c.write("Josh","How can I play tic-tac-toe when there's no center?",null)
 		"5_room":
-			c.write("Intercom","This is the last layer.","res://images/cirgarette_man_sillouette.png")
-			c.write("Josh","the last layer?",null)
+			c.write("The Old Man","So you made it.","res://images/cirgarette_man_bw.png")
+			c.write("Josh","It was you all along.",null)
+			c.write("The Old Man","That's right. It was an experiment whether the goat can read your mind or not.","res://images/cirgarette_man_bw.png")
+			c.write("The Old Man","It did communicate with you, but it didn't distract you.","res://images/cirgarette_man_bw.png")
+			c.write("Josh","By the way, the puzzles are easy as hell.",null)
+			c.write("The Old Man","I couldn't think of anything in a short period of time.","res://images/cirgarette_man_bw.png")
+			c.write("Josh","And you wasted my Game Jam time by playing your stupid game.",null)
+			c.write("Josh","I am filing charges against you.",null)
+			c.write("The Old Man","To do so, the exit is right theres.","res://images/cirgarette_man_bw.png")
 		_:
 			c.write("Josh","Nothing.",null)
 	pass # Replace with function body.

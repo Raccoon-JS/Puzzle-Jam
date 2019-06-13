@@ -3,19 +3,17 @@ extends Node2D
 # 2_room.gd
 
 var letters = ['A','B','C','D','E','F','G']
-var binary = ['0','1']
 var default = ['A','0','0','0','0','0','0','0','0']
 var numbers = [false,false,false,false,false,false,false,false]
 var num = [0,0,0,0,0,0,0,0]
+var correct_answer = ['C','0','1','0','0','0','0','1','1']
 var change_num = false
 var num_type = 0
-var question = preload("res://scenes/questions/question_1.tscn")
+var question = preload("res://scenes/questions/question_2.tscn")
 var q_enter = false
 var q_mode = false
 var open_door = false
-var right_answer = false
 var change_mode = false
-var num_mode = false
 var time_left
 var l = 0
 
@@ -63,11 +61,16 @@ func _input(event):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	time_left = clock.time_left
-
+	
 	if delta:
+		
 		time_text.text = "TIME: " + str(int(time_left))
+		
 		if l > letters.size() - 1:
 			l = 0
+		
+		$other_sprites/answer_1/Sprite/label.text = letters[l]
+		
 		match(num_type):
 			0:
 				$other_sprites/answer_2/Sprite/label.text = str(num[num_type])
@@ -85,6 +88,24 @@ func _process(delta):
 				$other_sprites/answer_8/Sprite/label.text = str(num[num_type])
 			7:
 				$other_sprites/answer_9/Sprite/label.text = str(num[num_type])
+		var answer = []
+		answer.append(letters[l])
+		for i in 8:
+			answer.append(str(num[i]))
+		var k = 0
+		for j in 9:
+			if answer[j] == correct_answer[j]:
+				k += 1
+			else:
+				k = 0
+		if k == correct_answer.size():
+			open_door = true
+		else:
+			open_door = false
+			answer.clear()
+		
+		if open_door:
+			$other_sprites/door.play("open")
 	pass
 
 
@@ -213,4 +234,10 @@ func _on_answer_9_body_exited(body):
 	if body.name == "player":
 		change_num = true
 		num_type = 7
+	pass # Replace with function body.
+
+func _on_open_door_body_entered(body):
+	if body.name == "player":
+		if open_door:
+			global.goto_scene("res://scenes/rooms/3_room.tscn")
 	pass # Replace with function body.

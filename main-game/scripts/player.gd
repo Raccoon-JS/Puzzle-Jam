@@ -5,6 +5,10 @@ const SPEED = 70
 var movedir = Vector2(0,0)
 var spritedir = "down"
 
+func _ready():
+	$animation.play("idle_up")
+	pass
+
 func _physics_process(delta):
 	if delta:
 		controls_loop()
