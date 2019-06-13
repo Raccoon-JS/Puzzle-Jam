@@ -17,7 +17,14 @@ func _ready():
 	$textbox.visible = false
 	$Josh.visible = false
 	$time_bar.visible = false
+	set_process(true)
 	pass # Replace with function body.
+
+func _process(delta):
+	if delta:
+		if $Timer.time_left <= 0:
+			global.goto_scene("res://scenes/game_over.tscn")
+	pass
 
 func _input(event):
 	if event.is_action_pressed("left_click"):

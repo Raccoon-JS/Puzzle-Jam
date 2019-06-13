@@ -11,7 +11,8 @@ var q_enter = false
 var q_mode = false
 var open_door = false
 var change_mode = false
-var on = false
+var on_1 = false
+var on_2 = false
 var tile = 0
 var tile_1 = false
 var tile_2 = false
@@ -35,17 +36,21 @@ func _input(event):
 				q_access.get_child(0).queue_free()
 	
 	if change_mode:
-		if event.is_action_pressed("interact"):
-			on = !on
+		#if event.is_action_pressed("interact"):
+		#	on = !on
 		
 		if tile == 1:
-			if on:
+			if event.is_action_pressed("interact"):
+				on_1 = !on_1
+			if on_1:
 				$other_sprites/answer_1.modulate = Color(0,0,0,1)
 				tile_1 = true
 			else:
 				$other_sprites/answer_1.modulate = Color(1,1,1,1)
 		elif tile == 2:
-			if on:
+			if event.is_action_pressed("interact"):
+				on_2 = !on_2
+			if on_2:
 				$other_sprites/answer_2.modulate = Color(0,0,0,1)
 				tile_2 = true
 			else:

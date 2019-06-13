@@ -241,3 +241,9 @@ func _on_open_door_body_entered(body):
 		if open_door:
 			global.goto_scene("res://scenes/rooms/3_room.tscn")
 	pass # Replace with function body.
+
+
+func _on_puzzle_description_body_exited(body):
+	if body.name == "player":
+		q_enter = false
+	pass # Replace with function body.

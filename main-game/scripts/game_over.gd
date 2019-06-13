@@ -1,13 +1,24 @@
 extends Node
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	
+	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	#$Tween.interpolate_property("modulate",$Tween,Color(1,1,1,1),Color(1,1,1,0),1,Tween.TRANS_EXPO,Tween.EASE_IN,1)
+	if delta:
+		if Input.is_key_pressed(KEY_1):
+			#$Tween.start()
+			$player.play("fade")
+			
+		if Input.is_key_pressed(KEY_2):
+			get_tree().quit()
+	pass
+
+
+
+
+func _on_player_animation_finished(anim_name):
+	if anim_name:
+		global.goto_scene("res://scenes/menu.tscn")
+	pass # Replace with function body.
