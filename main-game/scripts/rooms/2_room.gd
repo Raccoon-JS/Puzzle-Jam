@@ -56,6 +56,9 @@ func _input(event):
 				num[num_type] = 1
 			else:
 				num[num_type] = 0
+	
+	if event.is_action_pressed("interact"):
+		$other_sprites/sound_effect.play()
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -63,6 +66,8 @@ func _process(delta):
 	time_left = clock.time_left
 	
 	if delta:
+		if !$music.playing:
+			$music.play()
 		
 		time_text.text = "TIME: " + str(int(time_left))
 		
@@ -106,6 +111,7 @@ func _process(delta):
 		
 		if open_door:
 			$other_sprites/door.play("open")
+			#$other_sprites/door/sound.play()
 	pass
 
 

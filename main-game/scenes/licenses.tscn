@@ -9,10 +9,11 @@ size = 60
 extra_spacing_space = 20
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
+size = 21
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 72
 font_data = ExtResource( 2 )
 
@@ -37,7 +38,7 @@ margin_left = 88.0
 margin_top = 64.0
 margin_right = 872.0
 margin_bottom = 848.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "Most, but not all, of the assets are public domain, but there are some I would like to mention.
 
@@ -51,9 +52,19 @@ The wall tiles by Tiziana [ http://bitly.ws/46Ir ]
 Copyright (C) 1991, 1999 Free Software Foundation, Inc. [ http://bitly.ws/46Iv ]
 Copyright © 2007 Free Software Foundation, Inc. <https://fsf.org/>
 Attribution 3.0 Unported (CC BY 3.0) [ http://bitly.ws/46Iw ]
+\"LPC Goat\" by bluecarrot16. License: CC-BY 3.0 / GPL 2.0+ Based on \"LPC Style Farm Animals\" by Daniel Eddeland (daneeklu), commissioned by Thomas Bruno (tebruno99). License: CC-BY 3.0 / GPL 2+. http://opengameart.org/content/lpc-style-farm-animals
+Old man sprite by Erik Ylvisaker. [http://bitly.ws/484Y]
 
 Joshua McLane has gave a permission to use images of himself in this game.
-Along with the music."
+Contains music ©2019 Joshua McLean (mrjoshuamclean.com)
+Licensed under Creative Commons Attribution-ShareAlike 4.0 International
+
+Musics:
+50s bit
+Lights Out
+Night Chip
+Running
+Will"
 scroll_active = false
 
 [node name="return" type="Button" parent="."]
@@ -61,7 +72,7 @@ margin_left = 32.0
 margin_top = 864.0
 margin_right = 320.0
 margin_bottom = 944.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "return"
 flat = true

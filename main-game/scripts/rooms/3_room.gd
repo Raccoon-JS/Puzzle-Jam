@@ -55,6 +55,9 @@ func _input(event):
 				tile_2 = true
 			else:
 				$other_sprites/answer_1.modulate = Color(1,1,1,1)
+	
+	if event.is_action_pressed("interact"):
+		$other_sprites/sound_effect.play()
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -62,6 +65,9 @@ func _process(delta):
 	time_left = clock.time_left
 	
 	if delta:
+		if !$music.playing:
+			$music.play()
+		
 		time_text.text = "TIME: " + str(int(time_left))
 		
 		if tile_1 and tile_2:
@@ -69,6 +75,7 @@ func _process(delta):
 		
 		if open_door:
 			$other_sprites/door.play("open")
+			#$other_sprites/door/sound.play()
 	pass
 
 func _on_answer_1_body_entered(body):

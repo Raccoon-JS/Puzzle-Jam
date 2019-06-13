@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scripts/rooms/1_room.gd" type="Script" id=1]
 [ext_resource path="res://scenes/tiles/tile_set_1.tres" type="TileSet" id=2]
@@ -6,7 +6,9 @@
 [ext_resource path="res://scenes/door_animation.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/puzzle_description.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/answer.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/sound_effect.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/music.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -74,9 +76,14 @@ position = Vector2( 432, 304 )
 [node name="answer_2" parent="other_sprites" instance=ExtResource( 6 )]
 position = Vector2( 520, 450 )
 
-[node name="player" parent="." instance=ExtResource( 7 )]
+[node name="sound_effect" parent="other_sprites" instance=ExtResource( 7 )]
+
+[node name="player" parent="." instance=ExtResource( 8 )]
 pause_mode = 2
 position = Vector2( 448, 416 )
+
+[node name="music" parent="." instance=ExtResource( 9 )]
+volume_db = -10.0
 [connection signal="body_entered" from="other_sprites/door/front_door" to="." method="_on_front_door_body_entered"]
 [connection signal="body_entered" from="other_sprites/puzzle_description" to="." method="_on_puzzle_description_player_entered"]
 [connection signal="body_exited" from="other_sprites/puzzle_description" to="." method="_on_puzzle_description_body_exited"]

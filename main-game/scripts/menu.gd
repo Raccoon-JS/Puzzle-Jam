@@ -1,8 +1,14 @@
 extends Node
 
 func _ready():
-	
+	set_process(true)
 	pass # Replace with function body.
+
+func _process(delta):
+	if delta:
+		if !$music.playing:
+			$music.play()
+	pass
 
 func change_black():
 	$background/background_color.color = Color(0,0,0,1)

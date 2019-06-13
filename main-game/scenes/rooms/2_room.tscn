@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/rooms/2_room.gd" type="Script" id=1]
 [ext_resource path="res://scenes/tiles/default_tiles.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/door_animation.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/puzzle_description.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/answer.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/sound_effect.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/music.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
@@ -58,8 +60,13 @@ position = Vector2( 784, 720 )
 [node name="answer_9" parent="other_sprites" instance=ExtResource( 5 )]
 position = Vector2( 832, 720 )
 
-[node name="player" parent="." instance=ExtResource( 6 )]
+[node name="sound_effect" parent="other_sprites" instance=ExtResource( 6 )]
+
+[node name="player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 464, 304 )
+
+[node name="music" parent="." instance=ExtResource( 8 )]
+volume_db = -10.0
 [connection signal="body_entered" from="other_sprites/door/Area2D" to="." method="_on_open_door_body_entered"]
 [connection signal="body_entered" from="other_sprites/puzzle_description" to="." method="_on_puzzle_description_body_entered"]
 [connection signal="body_exited" from="other_sprites/puzzle_description" to="." method="_on_puzzle_description_body_exited"]

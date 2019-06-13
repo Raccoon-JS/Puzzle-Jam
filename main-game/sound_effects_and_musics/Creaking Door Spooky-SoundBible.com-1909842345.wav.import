@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Creaking Door Spooky-SoundBible.com-1909842345.wav-14eeb383af7618995e0f2ff64fa5fa48.sample"
+
+[deps]
+
+source_file="res://sound_effects_and_musics/Creaking Door Spooky-SoundBible.com-1909842345.wav"
+dest_files=[ "res://.import/Creaking Door Spooky-SoundBible.com-1909842345.wav-14eeb383af7618995e0f2ff64fa5fa48.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://images/Basic_Door_Pixel_bw.png" type="Texture" id=1]
 [ext_resource path="res://images/Basic_Door_Opening_Pixel_bw.png" type="Texture" id=2]
+[ext_resource path="res://scripts/door_animation.gd" type="Script" id=3]
+[ext_resource path="res://sound_effects_and_musics/Creaking Door Spooky-SoundBible.com-1909842345.wav" type="AudioStream" id=4]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -15,3 +17,10 @@ animations = [ {
 frames = SubResource( 1 )
 animation = "open"
 speed_scale = 10.0
+script = ExtResource( 3 )
+
+[node name="sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
+mix_target = 2
+[connection signal="animation_finished" from="." to="." method="_on_door_animation_finished"]

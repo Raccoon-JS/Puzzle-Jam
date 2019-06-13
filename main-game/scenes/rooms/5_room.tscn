@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scripts/rooms/5_room.gd" type="Script" id=1]
 [ext_resource path="res://scenes/tiles/tile_set_1.tres" type="TileSet" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/door_animation.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/old_man.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/music.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -73,4 +74,6 @@ scale = Vector2( 0.75, 0.75 )
 
 [node name="player" parent="." instance=ExtResource( 6 )]
 position = Vector2( 496, 432 )
+
+[node name="music" parent="." instance=ExtResource( 7 )]
 [connection signal="body_entered" from="other_sprites/door/Area2D" to="." method="_on_Area2D_body_entered"]

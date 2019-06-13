@@ -34,14 +34,17 @@ func _input(event):
 		elif q_access.get_child_count() > 0:
 			if event.is_action_pressed("interact"):
 				q_access.get_child(0).queue_free()
-	
+	if event.is_action_pressed("interact"):
+		$other_sprites/sound_effect.play()
 	pass
 
 func _process(delta):
+	
 	time_left = clock.time_left
 	
 	if wrong_answer:
 		if Input.is_action_just_pressed("interact"):
+			
 			clock.pause_mode = true
 			time_left -= 20
 			if time_left > 0:
@@ -54,8 +57,11 @@ func _process(delta):
 		if Input.is_action_just_pressed("interact"):
 			open_door = true
 			$other_sprites/door.play("open")
+			#$other_sprites/door/sound.play()
 	
 	if delta:
+		if !$music.playing:
+			$music.play()
 		time_text.text = "TIME: " + str(int(time_left))
 	pass
 
@@ -71,6 +77,7 @@ func _on_puzzle_description_body_exited(body):
 
 func _on_front_door_body_entered(body):
 	if body.name == "player":
+		
 		if open_door:
 				global.goto_scene("res://scenes/rooms/2_room.tscn")
 	pass # Replace with function body.

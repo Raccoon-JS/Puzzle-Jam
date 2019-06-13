@@ -1,12 +1,15 @@
 extends Node
 
 func _ready():
-	
+	set_process(true)
 	pass
 
 func _process(delta):
 	#$Tween.interpolate_property("modulate",$Tween,Color(1,1,1,1),Color(1,1,1,0),1,Tween.TRANS_EXPO,Tween.EASE_IN,1)
 	if delta:
+		if !$music.playing:
+			$music.play()
+		
 		if Input.is_key_pressed(KEY_1):
 			#$Tween.start()
 			$player.play("fade")

@@ -12,9 +12,16 @@ var clicks = 0
 var full_clicks = 0
 
 func _ready():
+	set_process(true)
 	story.request_ready()
 	write_component()
 	pass # Replace with function body.
+
+func _process(delta):
+	if delta:
+		if !$music.playing:
+			$music.play()
+	pass
 
 func _input(event):
 	if event.is_action_pressed("left_click"):
