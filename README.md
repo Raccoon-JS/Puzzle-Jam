@@ -2,7 +2,7 @@
 An entry for [8 Bits to Infinity's Puzzle Jam](https://itch.io/jam/puzzlejam) (and [Weekly Game Jam 100](https://itch.io/jam/weekly-game-jam-100)).
 
 <p align="center">
-TITLE: 100 SECONDS
+TITLE: 100 SECONDS<br>
 <img width="280" height="280" hspace="16" src="WeeklyGameJam.gif"><img width="120" height="120" hspace="16" src="plus-sign.jpeg"><img width="280" height="280" hspace="16" src="PuzzleJam.gif">
 </p>
 
