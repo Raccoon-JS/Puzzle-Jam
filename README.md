@@ -9,8 +9,8 @@ TITLE: 100 SECONDS
 Make a puzzle game under two different themes.
 
 <p align="center">
-<img width="400" height="400"src="/screenshots/screenshot_4.png">
-<img width="400" height="400"src="/screenshots/screenshot_6.png">
+<img width="700" height="700"src="/screenshots/screenshot_4.png">
+<img width="700" height="700"src="/screenshots/screenshot_6.png">
 </p>
 
 ## 8 Bits to Infinity
